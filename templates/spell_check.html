@@ -27,13 +27,13 @@ Demo App
     </nav>
 
     <div class="container">
-
+        
       <div class="starter-template">
-          <p id="result"> Success </p>
-        <h1>--------------------------</h1>
+        <h1 id="result">------------ success. --------------</h1>
         <h2>Submit Here</h2>
         <form method="POST">
-          <input name="text">
+          {{ form.hidden_tag() }}
+          {{ form.inputtext }}
           <input type="submit">
         </form>
       </div>
