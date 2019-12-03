@@ -149,7 +149,7 @@ def spell_check():    #how to call with logged_in_user
 def index_post():
 
     f = open("text.txt", "w")
-    intext = request.form['text'] #input("Enter something you want checked: ")
+    intext = request.form['inputtext'] #input("Enter something you want checked: ")
     f.write(intext)
     f.flush()
     f.close()
@@ -194,6 +194,8 @@ def login():
         hasher = SHA256()
         # Get the user we're attempting to log in as.
         user_record = session.query(User).filter(User.uname == form.username.data).first()
+        if not user_record:
+            return <p id="result"> Failure </p>
         # Grab their salt.
         salt = user_record.salt
         # Add password and salt to hasher.
