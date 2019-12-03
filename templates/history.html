@@ -1,4 +1,4 @@
 <h2 id="numqueries"> Number of Queries is {{ records|length }}! </h2>
 {% for record in records %}
-<a id="query{{ record.text }}" href="/history/query{{ record.text_id }}">{{ record.text_id }} </a> {{ record.intext }} <br>
+<a id="query{{ record.text_id }}" href="/history/query{{ record.text_id }}">{{ record.text_id }} </a> {{ record.intext }} <br>
 {% endfor %}
