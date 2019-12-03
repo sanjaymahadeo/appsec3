@@ -103,15 +103,15 @@ def load_user(user_id):
     return session.query(User).filter_by(id=user_id).first()
 
 class LoginForm(FlaskForm):
-    username = StringField('username', validators=[InputRequired(), Length(min=4, max=15)], id = "uname")
-    password = PasswordField('password', validators=[InputRequired(), Length(min=8, max=80)], id = "pword")
-    phonenumber = StringField('phonenumber', validators=[InputRequired(), Length(min=10, max=11)], id = "2fa")
+    username = StringField('username', validators=[InputRequired(), Length(min=1)], id = "uname")
+    password = PasswordField('password', validators=[InputRequired(), Length(min=1)], id = "pword")
+    phonenumber = StringField('phonenumber', validators=[InputRequired(), Length(min=1)], id = "2fa")
     remember = BooleanField('remember me')
 
 class RegisterForm(FlaskForm):
-    username = StringField('username', validators=[InputRequired(), Length(min=4, max=15)], id = "uname")
-    password = PasswordField('password', validators=[InputRequired(), Length(min=8, max=80)], id = "pword")
-    phonenumber = StringField('phonenumber', validators=[InputRequired(), Length(min=10, max=11)], id = "2fa")
+    username = StringField('username', validators=[InputRequired(), Length(min=1)], id = "uname")
+    password = PasswordField('password', validators=[InputRequired(), Length(min=1)], id = "pword")
+    phonenumber = StringField('phonenumber', validators=[InputRequired(), Length(min=1)], id = "2fa")
     
 class SpellCheckForm(FlaskForm):
     inputtext = StringField('inputtext', validators=[InputRequired()], id = "inputtext")
