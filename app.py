@@ -39,7 +39,6 @@ def setup_db():
 
 app = Flask(__name__)
 session = setup_db()
-session = None
 print('test')
 app.config['SECRET_KEY'] = 'Thisissupposedtobesecret!'
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db' #DBFILE here?
