@@ -195,7 +195,7 @@ def login():
         # Get the user we're attempting to log in as.
         user_record = session.query(User).filter(User.uname == form.username.data).first()
         if not user_record:
-            return <p id="result"> Failure </p>
+            return '<p id="result"> Failure </p>'
         # Grab their salt.
         salt = user_record.salt
         # Add password and salt to hasher.
