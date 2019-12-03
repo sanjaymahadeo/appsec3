@@ -1,0 +1,8 @@
+{% if record %}
+<p id="queryid"> Query {{ record.text_id }}</p>
+<p id="username"> User number {{ record.user.uname }}</p>
+<p id="querytext"> Intext {{ record.intext }}</p>
+<p id="queryresults"> Outtext {{ record.outtext }}</p>
+{% else %}
+<h1> NOT AUTHORIZED </h1>
+{% endif %}
