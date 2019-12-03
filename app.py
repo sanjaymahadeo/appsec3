@@ -38,6 +38,7 @@ def setup_db():
     #return DBSessionMaker
 
 app = Flask(__name__)
+session = setup_db()
 session = None
 print('test')
 app.config['SECRET_KEY'] = 'Thisissupposedtobesecret!'
@@ -307,6 +308,5 @@ def main():
 
 
 if __name__ == '__main__':
-    session = setup_db()
     main()
     #app.run(debug=True)
